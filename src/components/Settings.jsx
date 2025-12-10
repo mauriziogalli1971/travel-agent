@@ -167,10 +167,10 @@ export default function Settings() {
   }
 
   async function getLocationName({ lat, lon }) {
-    const base = import.meta.env.DEV
+    const baseUrl = import.meta.env.DEV
       ? '/nominatim'
       : 'https://nominatim.openstreetmap.org';
-    const nominatimUrl = `${base}/reverse?format=jsonv2&lat=${lat}&lon=${lon}`;
+    const nominatimUrl = `${baseUrl}/reverse?format=jsonv2&lat=${lat}&lon=${lon}`;
     try {
       const response = await fetch(nominatimUrl);
       return await response.json();
@@ -185,7 +185,10 @@ export default function Settings() {
 
     loader.current.classList.add('loading');
     try {
-      const response = await fetch('worker/', {
+      const workerUrl = import.meta.env.DEV
+        ? 'worker/'
+        : 'https://travel-agent-worker.mauriziogalli1971.workers.dev/';
+      const response = await fetch(workerUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
