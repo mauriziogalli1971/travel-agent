@@ -167,7 +167,10 @@ export default function Settings() {
   }
 
   async function getLocationName({ lat, lon }) {
-    const nominatimUrl = `/nominatim/reverse?format=jsonv2&lat=${lat}&lon=${lon}`;
+    const base = import.meta.env.DEV
+      ? '/nominatim'
+      : 'https://nominatim.openstreetmap.org';
+    const nominatimUrl = `${base}/reverse?format=jsonv2&lat=${lat}&lon=${lon}`;
     try {
       const response = await fetch(nominatimUrl);
       return await response.json();

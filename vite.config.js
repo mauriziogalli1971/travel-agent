@@ -16,8 +16,7 @@ export default defineConfig({
       '/nominatim': {
         target: 'https://nominatim.openstreetmap.org',
         changeOrigin: true,
-        rewrite: (path) =>
-          import.meta.env.DEV ? path.replace(/^\/nominatim/, '') : path,
+        rewrite: (path) => path.replace(/^\/nominatim/, ''),
         secure: false,
       },
     },
