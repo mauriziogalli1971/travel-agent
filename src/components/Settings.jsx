@@ -39,9 +39,14 @@ export default function Settings() {
       };
       userLocation.lat = position.coords.latitude;
       userLocation.lon = position.coords.longitude;
-      getLocationName(userLocation).then((location) => {
-        setFrom(location.address.city);
-      });
+      getLocationName(userLocation)
+        .then((location) => {
+          setFrom(location.address.city);
+        })
+        .catch((error) => {
+          console.error(error);
+          setFrom('');
+        });
     });
   }, []);
 
