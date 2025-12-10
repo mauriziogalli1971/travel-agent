@@ -152,16 +152,13 @@ export default function Settings() {
 
     loader.current.classList.add('loading');
     try {
-      const response = await fetch(
-        'https://travel-agent-worker.mauriziogalli1971.workers.dev/',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ from, to, travellers, start, end, budget }),
-        }
-      );
+      const response = await fetch('worker/', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ from, to, travellers, start, end, budget }),
+      });
       const tripData = await response.json();
       setTrip(tripData);
     } catch (error) {
