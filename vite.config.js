@@ -10,6 +10,7 @@ export default defineConfig({
         target: 'https://travel-agent-worker.mauriziogalli1971.workers.dev',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/worker/, ''),
+        secure: false,
       },
       // SerpApi
       '/serpapi': {
