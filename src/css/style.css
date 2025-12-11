@@ -158,6 +158,10 @@ button.form-control:hover {
   background-color: #28cc9a;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+
 .mt-2 {
   margin-top: 2rem;
 }
