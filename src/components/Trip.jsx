@@ -22,7 +22,7 @@ export function Trip({ start, end, from, to, weather, flight, hotel }) {
         <h2>Flights</h2>
         <div className="form-control-wrapper item text-left fw-normal fs-small">
           {flight}
-          <button className="form-control">Book</button>
+          <button className="form-control mt-1">Book</button>
         </div>
       </div>
 
@@ -30,7 +30,7 @@ export function Trip({ start, end, from, to, weather, flight, hotel }) {
         <h2>Hotel</h2>
         <div className="form-control-wrapper item text-left fw-normal fs-small">
           {hotel}
-          <button className="form-control">Book</button>
+          <button className="form-control mt-1">Book</button>
         </div>
       </div>
     </div>
