@@ -1,0 +1,20 @@
+{
+	"name": "travel-agent-worker",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"deploy": "wrangler deploy",
+		"dev": "wrangler dev",
+		"start": "wrangler dev",
+		"test": "vitest"
+	},
+	"devDependencies": {
+		"@cloudflare/vitest-pool-workers": "^0.8.19",
+		"vitest": "~3.2.0",
+		"wrangler": "^4.54.0"
+	},
+	"dependencies": {
+		"@supabase/supabase-js": "^2.89.0",
+		"openai": "^6.15.0"
+	}
+}

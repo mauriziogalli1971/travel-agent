@@ -1,0 +1,205 @@
+:root {
+  background-color: rgba(255, 255, 255, 0.87);
+  color: #242424;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-synthesis: none;
+  font-weight: 400;
+  line-height: 1.5;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 430px;
+  min-height: 100dvh;
+  padding: 3rem;
+}
+
+.view {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.view.start {
+  margin: auto;
+}
+.view.trip .row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.view.trip .row .col {
+  flex: 1;
+}
+.view.trip .item {
+  background-color: #bbf7f7;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+}
+.view.trip .item-dates {
+  border-radius: 2rem;
+  line-height: 2rem;
+  padding: 1rem;
+}
+.view.trip .item h3 {
+  line-height: 1.6;
+}
+
+.form .loader {
+  align-items: center;
+  background-color: rgba(36, 36, 36, 0.9);
+  background-image: url("../img/loader.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  color: #bbf7f7;
+  display: none;
+  inset: 0;
+  justify-content: center;
+  position: absolute;
+}
+.form .loader::after {
+  content: "Planning your trip...";
+}
+.form .loader.loading {
+  display: flex;
+}
+.form-control-wrapper {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-control {
+  align-items: center;
+  border: 0.4rem solid #242424;
+  border-radius: 6rem;
+  color: #242424;
+  display: flex;
+  flex-direction: row;
+  font-size: 2.5rem;
+  justify-content: center;
+  line-height: 1;
+  min-height: 6rem;
+  text-align: center;
+  width: 100%;
+}
+.form-control input {
+  all: unset;
+  margin: auto;
+  min-width: 4rem;
+}
+.form-control input:focus, .form-control input:focus-visible {
+  border-radius: 6rem;
+  height: 5.2rem;
+  outline: 0.4rem solid -webkit-focus-ring-color;
+  width: 100%;
+}
+.form-control .spinner {
+  all: unset;
+  flex: 0 0 4rem;
+  height: 4rem;
+  margin: 0 0.6rem;
+}
+.form-control .spinner img {
+  height: auto;
+  max-width: 100%;
+}
+
+button.form-control {
+  background-color: #4bdcb0;
+  font-weight: 700;
+  text-align: center;
+  transition: background-color 0.2s ease-in-out;
+}
+button.form-control:hover {
+  background-color: #28cc9a;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.my-auto {
+  margin: auto 0;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fw-normal {
+  font-weight: 400;
+}
+
+.fw-light {
+  font-weight: 300;
+}
+
+.fs-small {
+  font-size: 1.6rem;
+}
+
+/*# sourceMappingURL=style.css.map */
