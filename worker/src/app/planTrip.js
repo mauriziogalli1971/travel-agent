@@ -3,6 +3,7 @@ import { flightsAgent } from './agents/flightsAgent';
 import { hotelsAgent } from './agents/hotelsAgent';
 
 export async function planTrip({ openai, tripData, toolRunner, logger }) {
+	// noinspection ES6MissingAwait
 	const agentsPromises = [
 		weatherAgent({ openai, tripData, toolRunner, logger }),
 		flightsAgent({ openai, tripData, toolRunner, logger }),

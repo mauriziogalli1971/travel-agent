@@ -1,7 +1,6 @@
 import { withRetries } from './serviceHelpers';
 import { FetchClient } from '../http/fetchClient';
-import { NotFoundError } from 'openai';
-import { RemoteApiError } from '../../domain/errors';
+import { NotFoundError, RemoteApiError } from '../../domain/errors';
 
 export class WeatherService {
 	constructor({ api_key, timeoutMs, logger } = {}) {

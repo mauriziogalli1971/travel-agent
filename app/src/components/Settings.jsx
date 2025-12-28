@@ -57,7 +57,7 @@ export default function Settings() {
         <label htmlFor="travellers">Number of travellers</label>
         <div className="form-control">
           <button type="button" className="spinner" onClick={removeTraveller}>
-            <img src={decrementIcon} width="100" height="100"></img>
+            <img src={decrementIcon} width="100" height="100" alt="decrement icon"></img>
           </button>
           <input
             id="travellers"
@@ -67,7 +67,7 @@ export default function Settings() {
             value={travellers}
           />
           <button type="button" className="spinner" onClick={addTraveller}>
-            <img src={incrementIcon} width="100" height="100"></img>
+            <img src={incrementIcon} width="100" height="100" alt="increment icon"></img>
           </button>
         </div>
       </div>
@@ -134,7 +134,7 @@ export default function Settings() {
             name="budget"
             type="text"
             value={budget}
-            onChange={(e) => setBudget(e.target.value)}
+            onChange={(e) => setBudget(+e.target.value)}
           />
         </div>
       </div>
